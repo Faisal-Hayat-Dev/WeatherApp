@@ -26,7 +26,7 @@ search_btn.addEventListener("click", function () {
         return;
     }
 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=cee0ed6801054429819191809252805&q=${text_bar}&aqi=yes`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=cee0ed6801054429819191809252805&q=${text_bar}&aqi=yes`)
         .then(response => response.json())
         .then(data => {
             console.log(data)
@@ -45,4 +45,9 @@ search_btn.addEventListener("click", function () {
 
             }, 2000)
         })
+            .catch(error => {
+        loader.style.display = "none";
+        validation_h2.textContent = "City not found. Please try again.";
+        console.error("Error fetching weather data:", error);
+    });
 })
