@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/Sun-And-Cloud.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <div class="search_section">
+        <input type="text" name="text" value="" id="text" placeholder="Enter City Name">
+        <button id="btn">search</button>
+    </div>
+    <!-- Validiations -->
+    <div id="validation">
+        <h2></h2>
+    </div>
+    <div id="container">
+        <div class="inner_section">
+            <div id="weather_icon">
+                <div class="icon_city">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="contry">
+                        <h2 id="city">Peshawar</h2>
+                    </div>
+                </div>
+                <h5 id="contry_name">Pakistan</h5>
+            </div>
+            <div class="img">
+                <img src="./images/Sun-And-Cloud.png" alt="">
+            </div>
+            <!-- C -->
+            <div class="temp_section">
+                <div id="temp">
+                    <h2>29</h2>
+                </div>
+                <div class="cel">
+                    <p><sup>°</sup>C</p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="h_winds">
+                <!-- h -->
+                <div class="hmidity">
+                    <div class="img-box">
+                        <img src="./images/wavy_lines-removebg.png" alt="">
+                        <span id="hmidity-percent">64</span>
+                        <span>%</span>
+                    </div>
+                    <div>
+                        <h6>Humidity</h6>
+                    </div>
+                </div>
+                <!-- Winds -->
+                <div class="hmidity">
+                    <div class="img-box" id="wind-pic">
+                        <img src="./images/wind-speed.png" alt="">
+                        <span id="wind-speed">64</span>
+                        <span>kp/h</span>
+                    </div>
+                    <div>
+                        <h6>Wind speed </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
